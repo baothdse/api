@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 app.listen(port);
 
 // get user message
-app.post('/public/messages', bot.listen());
+app.post('/api/messages', bot.listen());
 
 console.log("Server start on port: " + port);
 
