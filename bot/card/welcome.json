@@ -1,0 +1,62 @@
+{
+    "contentType": "application/vnd.microsoft.card.adaptive",
+    "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+                "type": "Container",
+                "items": [
+                    {
+                        "type": "Image",
+                        "url": "https://static1.squarespace.com/static/5863fabbc534a5dbdee01b70/t/591f47cee6f2e160e9cb6f3c/1495222226413/chatbots.png",
+                        "size": "medium",
+                        "style": "person",
+                        "horizontalAlignment": "center"
+                    },
+                    {
+                        "type": "TextBlock",
+                        "text": "Uni Coorporation xin chào!",
+                        "size": "small",
+                        "horizontalAlignment": "center"
+                    },
+                    {
+                        "type": "TextBlock",
+                        "text": "Chúng tôi có thể giúp gì cho quý khách?",
+                        "size": "small",
+                        "horizontalAlignment": "center"
+                    }
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "type": "Action.Submit",
+                "title": "Tìm sản phẩm",
+                "data": {
+                    "type": "searchProduct"
+                }
+            },
+            {
+                "type": "Action.OpenUrl",
+                "title": "Xem khuyến mãi",
+                "url": "http://google.com"
+            },
+            {
+                "type": "Action.Submit",
+                "title": "Tìm cửa hàng",
+                "data": {
+                    "type": "searchStore"
+                }
+            },
+            {
+                "type": "Action.Submit",
+                "title": "Tài khoản của tôi",
+                "data": {
+                    "type": "myAccount"
+                }
+            }
+        ]
+    }
+}

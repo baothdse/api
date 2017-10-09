@@ -1,0 +1,99 @@
+{
+    "contentType": "application/vnd.microsoft.card.adaptive",
+    "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+                "type": "Container",
+                "items": [
+                    {
+                        "type": "ColumnSet",
+                        "columns": [
+                            {
+                                "type": "Column",
+                                "size": "auto",
+                                "items": [
+                                    {
+                                        "type": "Image",
+                                        "url": "http://www.highlandscoffee.com.vn/assets/layout/highlands_logo-896dd9ca8324f36e7fa2c49363e78459.png",
+                                        "size": "medium",
+                                        "style": "person"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "Column",
+                                "size": "stretch",
+                                "items": [
+                                    {
+                                        "type": "TextBlock",
+                                        "text": "Highland Coffee xin chào!",
+                                        "weight": "bolder",
+                                        "isSubtle": true
+                                    },
+                                    {
+                                        "type": "TextBlock",
+                                        "text": "Bạn muốn đặt sản phẩm " + productName +" phải không ạ",
+                                        "wrap": true
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "actions": [
+            // Hotels Search form
+            {
+                "type": "Action.ShowCard",
+                "title": "Chính xác",
+                "card": {
+                    "type": "AdaptiveCard",
+                    "body": [
+                        {
+                            "type": "Unispace",
+                            "text": "Chào mừng đến với Highland Coffee!",
+                            "weight": "bolder",
+                            "size": "large"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "Vui lòng nhập số lượng của sản phẩm: "
+                        },
+                        {
+                            "type": "Input.Number",
+                            "id": "quantity",
+                            "style": "text"
+                        }
+                    ],
+                    "actions": [
+                        {
+                            "type": "Action.Submit",
+                            "title": "Đặt",
+                            "data": {
+                                "type": "productDetail"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "Action.ShowCard",
+                "title": "Không",
+                "card": {
+                    "type": "AdaptiveCard",
+                    "body": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Bạn có muốn xem sản phẩm khác không?",
+                            "weight": "bolder"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

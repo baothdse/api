@@ -1,0 +1,87 @@
+{
+    "contentType": "application/vnd.microsoft.card.adaptive",
+    "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+            {
+                "type": "Container",
+                "items": [
+                    {
+                        "type": "TextBlock",
+                        "text": "Tìm kiếm",
+                        "size": "medium",
+                        "weight": "bolder",
+                        "horizontalAlignment": "center",
+                        "isSubtle": true
+                    },
+                    {
+                        "type": "Image",
+                        "url": "https://i.pinimg.com/564x/98/b2/2c/98b22c18a3ce401e150716ab4a92ed16.jpg",
+                        "size": "stretch",
+                        "horizontalAlignment": "center"
+                    }
+                ]
+            }
+        ],
+        "actions": [
+            {
+                "type": "Action.ShowCard",
+                "title": "Menu theo tên nhà hàng",
+                "card": {
+                    "type": "AdaptiveCard",
+                    "body": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Vui lòng nhập tên nhà hàng "
+                        },
+                        {
+                            "type": "Input.Text",
+                            "id": "restaurantName",
+                            "placeholder": "Uni Space, etc,...",
+                            "style": "text"
+                        }
+                    ],
+                    "actions": [
+                        {
+                            "type": "Action.Submit",
+                            "title": "Tìm",
+                            "data": {
+                                "type": "restaurantName"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "Action.ShowCard",
+                "title": "Tìm sản phẩm theo tên",
+                "card": {
+                    "type": "AdaptiveCard",
+                    "body": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Vui lòng nhập tên sản phẩm"
+                        },
+                        {
+                            "type": "Input.Text",
+                            "id": "productName",
+                            "placeholder": "Matcha, etc,...",
+                            "style": "text"
+                        }
+                    ],
+                    "actions": [
+                        {
+                            "type": "Action.Submit",
+                            "title": "Tìm",
+                            "data": {
+                                "type": "productName"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
